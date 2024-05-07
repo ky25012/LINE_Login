@@ -2,12 +2,10 @@ from flask import Flask, redirect, request, url_for ,render_template ,session
 import requests
 
 app = Flask(__name__)
-app.secret_key = "シークレットキー"
-#チャンネルID
-YOUR_CHANNEL_ID = "チャンネルID" 
-#リダイレクトURI
-YOUR_REDIRECT_URI = "http://localhost:5000/callback" #現在はローカルで
-YOUR_CHANNEL_SECRET = " # チャンネルシークレット"
+app.secret_key = os.environ.get("SECRET_KEY")
+YOUR_CHANNEL_ID = os.environ.get("YOUR_CHANNEL_ID")
+YOUR_REDIRECT_URI = os.environ.get("YOUR_REDIRECT_URI")
+YOUR_CHANNEL_SECRET = os.environ.get("YOUR_CHANNEL_SECRET")
 
 @app.route('/')
 def index():
