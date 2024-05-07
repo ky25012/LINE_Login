@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINEログイン</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>LINEログインテスト</title>
+    </head>
+    <body>
+        {% if user_logged_in %}
+            <h1>ログイン済み</h1>
+            <p>ようこそ、{{ user_name }}さん!</p>
+        {% else %}
+            <h1>ログインしてください</h1>
+            <a href="{{ url_for('login') }}">LINEでログイン</a>
+        {% endif %}
+    </body>
+    </html>
+    
+</body>
+</html>
