@@ -6,7 +6,7 @@ app.secret_key = "シークレットキー"
 #チャンネルID
 YOUR_CHANNEL_ID = "チャンネルID" 
 #リダイレクトURI
-YOUR_REDIRECT_URI = "http://localhost:5000/callback"
+YOUR_REDIRECT_URI = "http://localhost:5000/callback" #現在はローカルで
 YOUR_CHANNEL_SECRET = " # チャンネルシークレット"
 
 @app.route('/')
